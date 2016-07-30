@@ -17,14 +17,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    // 设置背景颜色
+    self.view.backgroundColor = [UIColor whiteColor];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    //试一试
-    //再试一试
-    
-    // Dispose of any resources that can be recreated.
-}
+
 
 @end

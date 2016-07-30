@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -14,9 +15,19 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    // 1.创建window
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    // 2.设置根视图导航控制器
+
+    // 2.1 创建控制器
+    UIViewController *vc = [[ViewController alloc]init];
+    // 2.2 创建导航控制器并设置根视图为vc
+    UINavigationController *nac = [[UINavigationController alloc] initWithRootViewController:vc];
+    // 2.3 设置window的根视图
+    [self.window setRootViewController:nac];
+    // 3.显示在视图上
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
